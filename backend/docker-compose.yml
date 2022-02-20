@@ -1,0 +1,18 @@
+# Use postgres/example user/password credentials
+# mongodb://localhost:27017
+version: "3.9"
+
+services:  
+
+  mongodb_dynonary:
+    image: mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: 123
+      MONGO_INITDB_DATABASE: dynonary
+
+    restart: always
+
+    ports:
+      - "27017:27017"
+
